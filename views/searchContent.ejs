@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= title %></title>	
+	<link rel='stylesheet' href='/stylesheets/style.css'>
+  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js">
+  </script>
+  <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">    
+  <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"
+  ></script>
+  <script type='text/javascript' src='/javascripts/bootstrap.min.js'>
+  </script>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <!-- 以表格的形式展示查询结果-->
+    <table class="table table-hover">
+       <tr class='first'>     
+            <!-- 遍历查询结果中指标（键）的名称放在表格第一行--> 
+            <% for (var j in content[0] ) {%>
+                <td class='first'><strong><%= j%></strong></td>
+            <%}%>                 
+       </tr>
+       <!-- 显示查询结果-->
+       <% for(var i=0;i<content.length;i++){%>
+         <tr class="info">
+           <% for(var j in content[i]){%>
+               <td><%= content[i][j]%></td>
+           <%}%>
+         </tr>
+       <%}%>    
+    </table> 
+	<!-- <div><%= content %></div> -->
+</body>
+</html>

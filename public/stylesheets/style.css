@@ -1,0 +1,21 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+table,tr,td{
+	border:1px solid black;
+	text-align: center;
+}
+.first{
+	background:pink;
+}
+
+.bg{
+	background-image: url('/pic/coffee.jpg');
+	background-size: 100% 100%;
+}
